@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+
+        let nColumnas = parseInt(prompt("Introduzca el número de columnas de la tabla"));
+        let alto = parseInt(prompt("Introduzca la altura de la tabla en píxeles"));
+        let ancho = parseInt(prompt("Introduzca la anchura de las celdas en píxeles"));
+
+        
+        document.write(`<table border="0" cellspacing="2" bgcolor="black" width="${ancho*nColumnas}">`);
+        document.write(`<tr bgcolor="white" height="${alto}">`);
+
+        for (let index = 0; index < nColumnas; index++) {
+            document.write(`<td width="${ancho}">&nbsp;</td>`);
+            
+        }
+        document.write(`</tr>`);
+        document.write(`</table>`);
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <script>
+      let numeroCorrecto = parseFloat(
+        prompt("Introduzca el número a adivinar: "),
+      );
+      let numeroDado;
+      let mensaje = "Introduzca un número para adivinar el escondido:";
+      do {
+        numeroDado = parseFloat(prompt(mensaje));
+        if (numeroDado !== numeroCorrecto) {
+          if (numeroDado > numeroCorrecto) {
+            mensaje =
+              "El número es menor que el que me has dado. Inténtalo de nuevo.";
+          } else {
+            mensaje =
+              "El número es mayor que el que me has dado. Inténtalo de nuevo.";
+          }
+        } else {
+          alert("¡Correcto! Has adivinado el número.");
+        }
+      } while (numeroDado !== numeroCorrecto);
+    </script>
+  </body>
+</html>

@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <script>
+        var countdown = parseInt(prompt("Introduce un número para iniciar la cuenta atrás"));
+
+        // En el bucle for inicializamos 'countdown', ponemos la condición de parada (> 0) y el decremento (i--)
+        for (let index = countdown; index > 0; index--) {
+            alert(index + "... ");
+            /* index++; esta línea haría que se cree un bucle infinito porque nunca se cumple la condición 
+               para salir porque siempre está sumando por lo que nunca llegará a 0 */
+        }
+    </script>
+</body>
+</html>

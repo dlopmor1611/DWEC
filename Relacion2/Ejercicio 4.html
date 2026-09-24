@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 4</title>
+</head>
+<body>
+    <script>
+        let columnas;
+        let altura;
+        let anchura;
+
+        let columnascompletadas = 0;
+
+        columnas=parseInt(prompt("Dime el número de columnas de una tabla: "));
+        altura=parseInt(prompt("Dime el número de pixeles que quieres para la altura de las celdas: "));
+        anchura=parseInt(prompt("Dime el número de pixeles que quieres para la anchura de las celdas: "));
+
+        document.write(`<table border="0" cellspacing="2" bgcolor="black" width="${anchura*columnas}">`);
+        document.write(`<tr bgcolor="white" height="${altura}">`);
+        while (columnascompletadas < columnas) {
+             document.write(`<td width="${anchura}"> &nbsp;</td>`);
+             columnascompletadas++;
+        }
+        document.write(`</tr>`);
+        document.write(`</table>`);
+    </script>
+</body>
+</html>
