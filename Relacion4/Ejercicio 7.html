@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Dame un número para comprobar si es divisible por otro"));
+        let numeroDividir = parseInt(prompt("Dame un número para comprobar si es divisor"));
+
+        function divisibleEntre(n, d) {
+            if (n%d == 0) {
+                document.write(`${n} es divisible por ${d}`);
+            } else {
+                document.write(`${n} NO es divisible por ${d}`);
+            }
+
+            return;
+        }
+
+        divisibleEntre(numero);
+    </script>
+</body>
+</html>
