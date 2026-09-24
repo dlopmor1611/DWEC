@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        let edadActual = parseInt(prompt("Dime tu edad actual"));
+        let edadMaxima = parseInt(prompt("Dime tu edad maxima"));
+        let cantidad = parseInt(prompt("Dime cuanto vas a comer por día"));
+
+        function supplyCalculator(eActual,eMaxima, c) {
+            let cantidadTotal = ((eMaxima-eActual)*365) * c;
+            document.write(`You will need ${cantidadTotal} to last you until the ripe old age of ${eMaxima}`)
+        }
+
+        supplyCalculator(edadActual,edadMaxima,cantidad)
+    </script>
+</body>
+</html>

@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        let birthYear = parseInt(prompt("Dame tu año de nacimiento: "));
+        function ageCalculator(nacimiento) {
+            
+            let currentYear = parseInt(new Date().getFullYear());
+            let age = currentYear-nacimiento;
+            
+            document.write(`They are either ${age-1} or ${age}`);
+        }
+        ageCalculator(birthYear);
+    </script>
+
+</body>
+</html>
