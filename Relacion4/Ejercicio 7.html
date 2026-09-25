@@ -11,13 +11,11 @@
         let numeroDividir = parseInt(prompt("Dame un número para comprobar si es divisor"));
 
         function divisibleEntre(n, d) {
-            if (n%d == 0) {
+            if (n%d === 0) {
                 document.write(`${n} es divisible por ${d}`);
             } else {
-                document.write(`${n} NO es divisible por ${d}`);
+            document.write(`${n} NO es divisible por ${d}`);
             }
-
-            return;
         }
 
         divisibleEntre(numero);
