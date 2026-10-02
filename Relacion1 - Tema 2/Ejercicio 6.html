@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+    <script>
+        let nombreCompleto = prompt("Introduzca su nombre completo");
+        console.log(`El tamaño de tu nombre más tus apellidos es: ${nombreCompleto.length}`);
+        console.log(`La cadena en minúscula es ${nombreCompleto.toLowerCase()}\n y en mayusculas es ${nombreCompleto.toUpperCase()}`);
+        let dividido = nombreCompleto.split(' ');
+
+        console.log(`Nombre: ${dividido[0]}\nApellido1: ${dividido[1]}\nApellido2: ${dividido[2]}`)
+    </script>
+</body>
+</html>
