@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+    <script src="app.js"></script>
+</head>
+<body>
+    <script>
+        // 1. Tarjeta válida con fecha futura (debe dar true)
+        console.log(validateCardOpc("49927398716", 12, 2028)); // true
+
+        // 2. Misma tarjeta válida pero caducada en el pasado (debe dar false)
+        console.log(validateCardOpc("49927398716", 5, 2020)); // false
+
+        // 3. Número inválido por algoritmo de Luhn (cambia el último dígito a 7)
+        console.log(validateCardOpc("49927398717", 12, 2028)); // false
+
+        // 4. Mismo año actual, pero mes pasado (debe dar false)
+        let anioActual = new Date().getFullYear();
+        console.log(validateCardOpc("49927398716", 1, anioActual)); // false
+    </script>
+</body>
+</html>

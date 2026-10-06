@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 13</title>
+</head>
+<body>
+    <script>
+        let numero = parseInt(prompt("Introduzca un número para hacer su factorial"));
+        function factorial(n) {
+            if (n < 0) return "no existe para números negativos";
+            
+            let fact = 1;
+            for (let index = n; index > 0; index--) {
+                fact *= index;
+            }
+
+            return fact;
+        }
+
+        document.write(`El factorial de ${numero} es ${factorial(numero)}`);
+    </script>
+</body>
+</html>

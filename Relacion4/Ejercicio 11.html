@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 11</title>
+</head>
+<body>
+    <script>
+        let masaCorporal = parseInt(prompt("Dame tu masa en kg"));
+        let altura = parseFloat(prompt("Dame tu altura en metros"));
+
+        function imc(m,altura) {
+            return m*(altura*altura);
+        }
+
+        document.write(`Tu IMC es ${imc(masaCorporal, altura)}`);
+    </script>
+</body>
+</html>

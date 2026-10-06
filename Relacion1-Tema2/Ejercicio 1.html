@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        let hoy = new Date();
+
+        let navidad = new Date(2026,11,19);
+
+        let diasHastaNavidad = navidad - hoy;
+        
+        document.write(`Quedan ${parseInt(diasHastaNavidad/86400000)} días hasta Navidad`);
+    </script>
+</body>
+</html>

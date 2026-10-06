@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 8</title>
+  </head>
+  <body>
+    <script>
+      // 1. Primer prompt con la pregunta inicial
+      let nombre = prompt(
+        "¿Cuál fue el primer presidente de la democracia española?",
+      );
+
+      // 2. El bucle se repite MIENTRAS la respuesta NO sea la correcta
+      while (nombre !== "Adolfo Suarez") {
+        if (nombre === "Adolfo") {
+          // Si solo pone el nombre
+          nombre = prompt(
+            "Te falta el apellido. ¿Cuál fue el primer presidente de la democracia española?",
+          );
+        } else if (nombre === "Suarez") {
+          // Si solo pone el apellido
+          nombre = prompt(
+            "Te falta el nombre. ¿Cuál fue el primer presidente de la democracia española?",
+          );
+        } else {
+          // Si se equivoca por completo
+          nombre = prompt(
+            "ERROR. Inténtelo de nuevo. ¿Cuál fue el primer presidente de la democracia española?",
+          );
+        }
+      }
+
+      // 3. Si sale del bucle, significa que acertó
+      alert("¡Correcto! Bienvenido.");
+    </script>
+  </body>
+</html>
