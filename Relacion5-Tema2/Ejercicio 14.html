@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 14</title>
+</head>
+<body>
+    <p onclick="abrirVentanas()">Haz clic aquí</p>
+    <script>
+         function abrirVentanas() {
+            for (let i = 1; i <= 5; i++) {
+                // Abre ventana de 350x350
+                let win = window.open("", "_blank", "width=350,height=350");
+                
+                // Escribe el texto y el botón de cerrar directamente
+                win.document.write(`
+                    <h1>Ventana ${i}</h1>
+                    <button onclick="window.close()">Cerrar</button>
+                `);
+            }
+        }
+    </script>
+</body>
+</html>
