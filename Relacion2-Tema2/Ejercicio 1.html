@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 1</title>
+  </head>
+  <body>
+    <script>
+      let segundos = 60;
+      let timer;
+      function actualizarContador() {
+        console.log(segundos);
+
+        if (segundos === 0) {
+          clearInterval(timer);
+          console.log("¡Tiempo terminado!");
+        } else {
+          segundos--;
+        }
+      }
+
+      timer = setInterval(actualizarContador, 1000);
+    </script>
+  </body>
+</html>
