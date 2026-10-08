@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        let grados = parseFloat(prompt("Introduzca un ángulo en grados:"));
+
+        let radianes = grados * (Math.PI / 180);
+
+        document.write(`El seno es: ${Math.sin(radianes).toFixed(2)}<br>`);
+        document.write(`El coseno es: ${Math.cos(radianes).toFixed(2)}<br>`);
+        document.write(`La tangente es: ${Math.tan(radianes).toFixed(2)}`);
+    </script>
+</body>
+</html>

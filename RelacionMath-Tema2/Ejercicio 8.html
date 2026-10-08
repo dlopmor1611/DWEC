@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <div class="container">
+        <h1>Imagen del día (Aleatoria)</h1>
+        
+    </div>
+    <script>
+        const imagenes = [
+            "./Imagenes/imagen1.jpg",
+            "./Imagenes/imagen2.jpg",
+            "./Imagenes/imagen3.jpg"
+        ];
+
+        let indiceAleatorio = Math.floor(Math.random() * imagenes.length);
+        document.write(`<img id="imagenAleatoria" src="${imagenes[indiceAleatorio]}" alt="Imagen aleatoria">`);
+    </script>
+</body>
+</html>

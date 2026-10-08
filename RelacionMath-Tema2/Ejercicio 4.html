@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <script>
+      let continuar = true;
+
+      while (continuar) {
+        let cateto1 = parseFloat(prompt("Introduzca el primer cateto:"));
+        let cateto2 = parseFloat(prompt("Introduzca el segundo cateto:"));
+
+        if (isNaN(cateto1) || isNaN(cateto2) || cateto1 <= 0 || cateto2 <= 0) {
+          alert("Por favor, introduzca números válidos mayores que cero.");
+        } else {
+          let hipotenusa = Math.sqrt(Math.pow(cateto1, 2) + Math.pow(cateto2, 2));
+          alert(`La hipotenusa es: ${hipotenusa.toFixed(2)}`);
+        }
+
+        let parar = prompt("¿Quieres parar?\n1. Sí\nOtro número. No");
+        if (parar === "1") {
+          continuar = false;
+        }
+      }
+    </script>
+  </body>
+</html>
