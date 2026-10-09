@@ -1,0 +1,80 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 6</title>
+  </head>
+  <body>
+    <h2>Ejercicio 2 - Colecciones del Documento</h2>
+
+    <div class="elementos-prueba">
+      <h3>Elementos de prueba en la página:</h3>
+
+      <!-- Anclas (etiquetas <a> con atributo name) -->
+      <p>
+        <b>Anclas:</b>
+        <a name="anclaSeccion1">Ancla Sección 1</a> |
+        <a name="anclaSeccion2">Ancla Sección 2</a>
+      </p>
+
+      <!-- Enlaces (etiquetas <a> con atributo href) -->
+      <p>
+        <b>Enlaces:</b>
+        <a href="https://www.google.com">Google</a> |
+        <a href="https://www.wikipedia.org">Wikipedia</a>
+      </p>
+
+      <!-- Imágenes (etiquetas <img>) -->
+      <p><b>Imágenes:</b></p>
+      <img
+        id="img1"
+        src="./Imágenes/Img1.png"
+        alt="img1"
+        width="80"
+      />
+      <img
+        id="img2"
+        src="./Imágenes/Img2.png"
+        alt="img2"
+        width="80"
+      />
+    </div>
+
+    <h3>Opciones:</h3>
+    <ul>
+      <li>
+        <a href="javascript:void(0)" onclick="mostrarNumeroAnclas()"
+          >a Mostrar número de anclas</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick="mostrarTextoPrimerAncla()"
+          >b Mostrar texto del primer ancla (innerHTML)</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick="mostrarNumeroImagenes()"
+          >c Mostrar número de imágenes</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick="mostrarIdPrimeraImagen()"
+          >d Mostrar ID de la primera imagen</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick="mostrarNumeroEnlaces()"
+          >e Mostrar número de enlaces</a
+        >
+      </li>
+      <li>
+        <a href="javascript:void(0)" onclick="cambiarTitulo()"
+          >f Cambiar el título del documento</a
+        >
+      </li>
+    </ul>
+
+    <script src="./Scripts/scriptsEJ6.js"></script>
+  </body>
+</html>

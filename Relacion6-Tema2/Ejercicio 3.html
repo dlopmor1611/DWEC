@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 3</title>
+
+</head>
+<body>
+
+    <h2>Ejercicios de Ventanas y Navegador (BOM)</h2>
+
+    <ul>
+        <!-- a) Ventana de confirmación -->
+        <li>
+            <a onclick="apartadoA()">a Abrir ventana de confirmación</a>
+        </li>
+
+        <!-- b) Abrir y comprobar si está cerrada -->
+        <li>
+            <a onclick="abrirVentana()">b Abrir ventana para pruebas</a> | 
+            <a onclick="comprobarCerrada()">Analizar si la ventana está cerrada o no</a>
+        </li>
+
+        <!-- c) Ventana y pedir nuevo nombre -->
+        <li>
+            <a onclick="apartadoC()">c Abrir ventana y pedir un nuevo nombre para ella</a>
+        </li>
+
+        <!-- d) Cerrar actual y cerrar ventanaNueva -->
+        <li>
+            <a onclick="window.close()">d.1 Cerrar la ventana actual</a> | 
+            <a onclick="cerrarVentanaNueva()">d.2 Cerrar ventana 'ventanaNueva'</a>
+        </li>
+
+        <!-- f) Ventana 300x100 redimensionable -->
+        <li>
+            <a onclick="apartadoF()">f Abrir ventana 300x100 (cambiable de tamaño)</a>
+        </li>
+
+        <!-- g) Escribir en la página padre desde la hija -->
+        <li>
+            <a onclick="apartadoG()">g Abrir ventana que escribe texto en la página padre</a>
+            <span id="mensajeG"></span>
+        </li>
+
+        <!-- h) Mover 50px abajo y derecha -->
+        <li>
+            <a onclick="apartadoH()">h Mover ventana 50px hacia abajo y a la derecha</a>
+        </li>
+
+        <!-- i) Posición concreta (100, 100) respecto a la esquina superior izquierda -->
+        <li>
+            <a onclick="apartadoI()">i Situar ventana en la posición concreta (100, 100)</a>
+        </li>
+
+        <!-- j) Mover scroll 10px hacia abajo -->
+        <li>
+            <a onclick="apartadoJ()">j Mover la barra de desplazamiento 10px hacia abajo</a>
+        </li>
+    </ul>
+
+    <!-- Espacio extra al final para que la página tenga scroll y funcione el apartado j -->
+    <div class="espacio-scroll">
+        <p>Espacio para probar el desplazamiento del scroll (Apartado j).</p>
+    </div>
+
+    <script src="./Scripts/scriptsEJ3.js">
+        
+    </script>
+</body>
+</html>
