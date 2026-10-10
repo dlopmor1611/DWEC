@@ -1,0 +1,75 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio1 - Mapa Leaflet</title>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.css"
+      integrity="sha256-P+hWJNlpL+GBSRYC7cdsDbQH91URmpDeOzLp7DbFRtE="
+      crossorigin=""
+    />
+    <style>
+      #map {
+        height: 400px;
+        width: 100%;
+      }
+
+      /* Solución al problema de la pantalla gris en Leaflet 2.0-alpha.1 */
+      .leaflet-container img.leaflet-tile {
+        mix-blend-mode: normal !important;
+      }
+    </style>
+    <script type="importmap">
+      {
+        "imports": {
+          "leaflet": "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js"
+        },
+        "integrity": {
+          "https://cdn.jsdelivr.net/npm/leaflet@2.0.0-alpha.1/dist/leaflet.js": "sha256-gj5JhNAaMi6LCs+jVFOk8sXDe1sWSS2Zlc87m+trLiQ="
+        }
+      }
+    </script>
+  </head>
+  <body>
+    <div id="map"></div>
+
+    <script type="module">
+      // 1. Importamos los módulos correctos de Leaflet v2
+      import { Map, TileLayer } from "leaflet";
+
+      // 2. Inicializamos el mapa con una ubicación temporal (Londres) hasta que cargue el GPS
+      const map = new Map("map").setView([51.505, -0.09], 13);
+
+      // 3. Cargamos las capas de OpenStreetMap
+      new TileLayer("https://tile.openstreetmap.org/{z}/{x}/{y}.png", {
+        maxZoom: 19,
+        referrerPolicy: "no-referrer-when-downgrade",
+        attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>',
+      }).addTo(map);
+
+      // 4. Funciones de Geolocalización en tiempo real
+      function success(position) {
+        const lat = position.coords.latitude;
+        const lon = position.coords.longitude;
+        
+        // Mueve el mapa suavemente a las coordenadas reales detectadas
+        map.setView([lat, lon], 16);
+      }
+
+      function error() {
+        alert("Sorry, no position available.");
+      }
+
+      const options = {
+        enableHighAccuracy: true,
+        maximumAge: 30000,
+        timeout: 27000,
+      };
+
+      // 5. Activamos el rastreador
+      const watchID = navigator.geolocation.watchPosition(success, error, options);
+    </script>
+  </body>
+</html>
