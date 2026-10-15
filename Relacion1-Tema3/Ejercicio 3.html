@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script src="funciones.js"></script> 
+    <script>
+        let cant1 = 0;
+        let cant2 = 0;
+        let cant3 = 0;
+        let cant4 = 0;
+        let cant5 = 0;
+        let cant6 = 0;
+
+        for (let i = 0; i < 6000; i++) {
+                switch (lanzamiento()) {
+                case 1:
+                    cant1++;
+                break;
+                case 2:
+                    cant2++;
+                break;
+                case 3:
+                    cant3++;
+                break;
+                case 4:
+                    cant4++;
+                break;
+                case 5:
+                    cant5++;
+                break;
+                case 6:
+                    cant6++;
+                break;
+            }
+        }  
+
+        document.write(`Ha salido el 1 ${cant1} veces<br>`);
+        document.write(`Ha salido el 2 ${cant2} veces<br>`);
+        document.write(`Ha salido el 3 ${cant3} veces<br>`);
+        document.write(`Ha salido el 4 ${cant4} veces<br>`);
+        document.write(`Ha salido el 5 ${cant5} veces<br>`);
+        document.write(`Ha salido el 6 ${cant6} veces`);
+    </script>
+</body>
+</html>
