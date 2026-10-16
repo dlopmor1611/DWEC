@@ -1,6 +1,6 @@
 // Ejercicio 1
-function maximo(n1,n2,n3,n4) {
-    return Math.max(n1,n2,n3,n4);
+function maximo(... arg) {
+    return Math.max(... arg);
 }
 
 // Ejercicio 2
