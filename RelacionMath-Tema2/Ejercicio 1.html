@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        document.write(`El número aleatorio entre 0 y 1 es ${Math.random().toFixed(2)}<br>`);
+
+        let min = 100;
+        let max = 200;
+        let numAleatorio = Math.random() * (max - min + 1) + min;
+
+        document.write(`El número aleatorio entre 100 y 200 es ${numAleatorio.toFixed(2)}<br>`);
+
+        let minTeclado = parseInt(prompt("Introduzca le número más pequeño"));
+        let maxTeclado = parseInt(prompt("Introduzca le número más grande"));
+        let numAleatorioTeclado = Math.random() * (maxTeclado - minTeclado + 1) + minTeclado;
+
+        document.write(`El número aleatorio entre ${minTeclado} y ${maxTeclado} es ${numAleatorioTeclado.toFixed(2)}`);
+    </script>
+</body>
+</html>

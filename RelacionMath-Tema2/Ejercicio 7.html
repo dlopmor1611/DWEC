@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+    <script>
+
+        document.write(`<table border="1">`);
+        for (let index = 0; index <= 360; index += 15) {
+            let angulo = index * (Math.PI / 180);
+
+            document.write(`<tr>`);
+            document.write(`<td>${index}</td>`);
+            document.write(`<td>${Math.sin(angulo).toFixed(2)}</td>`);
+            document.write(`</tr>`);
+        }
+
+        document.write(`</table>`);
+    </script>
+</body>
+</html>

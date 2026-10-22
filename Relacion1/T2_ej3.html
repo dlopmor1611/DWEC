@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        // Solicita la edad al usuario y la convierte a un número entero
+        let edad = parseInt(prompt("Introduzca su edad: "));
+
+        // Comprueba si la edad es menor de 8 años
+        if (edad < 8) {
+            document.write("Eres demasiado joven para usar este servicio");
+        } else {
+            // Clasifica según el rango de edad
+            switch (edad) {
+                case 8:
+                case 9:
+                    document.write("benjamín");
+                break;
+                case 10:
+                case 11:
+                    document.write("alevín");
+                break;
+                case 12:
+                case 13:
+                    document.write("infantil");
+                break;
+                case 14:
+                case 15:
+                    document.write("cadete");
+                break;
+                case 16:
+                case 17:
+                case 18:
+                    document.write("juvenil");
+                break;
+                default:
+                    // Cualquier edad superior a 18 cae en la categoría absoluto
+                    document.write("absoluto");
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

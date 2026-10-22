@@ -1,0 +1,30 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 5</title>
+  </head>
+  <body>
+    <script>
+      let a = parseInt(prompt("Introduzca el primer número de la ecuación"));
+      let b = parseInt(prompt("Introduzca el segundo número de la ecuación"));
+      let c = parseInt(prompt("Introduzca el tercer número de la ecuación"));
+
+      let discriminante = Math.pow(b, 2) - 4 * a * c;
+
+      if (discriminante < 0) {
+        document.write(
+          "La ecuación no tiene soluciones reales (el resultado de la raíz es negativo)",
+        );
+      } else {
+        let solucionPositiva = (-b + Math.sqrt(discriminante)) / (2 * a);
+        let solucionNegativa = (-b - Math.sqrt(discriminante)) / (2 * a);
+
+        document.write(
+          `Las soluciones de la ecuación de segundo grado son ${solucionPositiva.toFixed(2)} y ${solucionNegativa.toFixed(2)}`,
+        );
+      }
+    </script>
+  </body>
+</html>
