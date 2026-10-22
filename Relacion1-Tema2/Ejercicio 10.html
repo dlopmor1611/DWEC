@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <script>
+        let contadorA = 0;
+        let contadorE = 0;
+        let contadorI = 0;
+        let contadorO = 0;
+        let contadorU = 0;
+
+        let cadena = prompt("Introduzca una frase");
+        for (let index = 0; index < cadena.length; index++) {
+            switch (cadena[index].toLowerCase()) {
+                case 'a':
+                    contadorA++;
+                break;
+            
+                case 'e':
+                    contadorE++;
+                break;
+
+                case 'i':
+                    contadorI++;
+                break;
+
+                case 'o':
+                    contadorO++;
+                break;
+
+                case 'u':
+                    contadorU++;
+                break;
+            }
+        }
+        document.write(`La a aparece en la cadena ${contadorA} veces<br>`);
+        document.write(`La e aparece en la cadena ${contadorE} veces<br>`);
+        document.write(`La i aparece en la cadena ${contadorI} veces<br>`);
+        document.write(`La o aparece en la cadena ${contadorO} veces<br>`);
+        document.write(`La u aparece en la cadena ${contadorU} veces`);
+    </script>
+</body>
+</html>

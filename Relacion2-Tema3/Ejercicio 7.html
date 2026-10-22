@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 7</title>
+</head>
+<body>
+     <script>
+        let arrayOriginal = [];
+        for (let i = 0; i < 20; i++) {
+            let numeroAleatorio = Math.floor(Math.random() * 101);
+            arrayOriginal.push(numeroAleatorio);
+        }
+
+        let arraySinDuplicados = [];
+        for (let i = 0; i < arrayOriginal.length; i++) {
+            if (!arraySinDuplicados.includes(arrayOriginal[i])) {
+                arraySinDuplicados.push(arrayOriginal[i]);
+            }
+        }
+
+        let arrayOrdenado = [...arraySinDuplicados];
+
+        for (let i = 0; i < arrayOrdenado.length - 1; i++) {
+            for (let j = 0; j < arrayOrdenado.length - 1 - i; j++) {
+                if (arrayOrdenado[j] > arrayOrdenado[j + 1]) {
+                    let temporal = arrayOrdenado[j];
+                    arrayOrdenado[j] = arrayOrdenado[j + 1];
+                    arrayOrdenado[j + 1] = temporal;
+                }
+            }
+        }
+
+        document.write(`
+            <p><strong>Valores originales (con posibles duplicados):</strong> ${arrayOriginal.join(", ")}</p>
+            <p><strong>Valores sin duplicados (sin ordenar):</strong> ${arraySinDuplicados.join(", ")}</p>
+            <p><strong>Valores ordenados (método burbuja):</strong> ${arrayOrdenado.join(", ")}</p>
+        `);
+    </script>
+</body>
+</html>

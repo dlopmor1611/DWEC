@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        let radio = parseFloat(prompt("Introduzca el radio"));
+
+        function area(r) {
+            let superficie = Math.PI * (r*r);
+            document.write(`The area is ${superficie}<br>`);
+        }
+
+        function circumference(r) {
+            let circunferencia = 2 * Math.PI * r;
+            document.write(`The circumference is ${circunferencia}`);
+        }
+
+        area(radio);
+        circumference(radio);
+    </script>
+</body>
+</html>

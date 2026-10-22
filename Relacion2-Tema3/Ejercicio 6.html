@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+    <h1>Buscador de Palabras</h1>
+    
+    <p>Presenta el concepto o la idea central que se va a tratar en el bloque.</p>
+    <p>Aportan argumentos, explicaciones, datos o ejemplos que complementan y sustentan la idea central.</p>
+    <p> Sintetiza o concluye lo expuesto en el párrafo, no es obligatoria en todos los casos.</p>
+
+    <button onclick="buscarPalabra()">Buscar palabra</button>
+
+    <script>
+        function buscarPalabra() {
+            const termino = prompt("Introduce la palabra o cadena de texto que deseas buscar:");
+            
+            if (termino === null || termino.trim() === "") {
+                alert("No introdujiste ningún texto válido.");
+                return;
+            }
+
+            const textoPagina = document.body.textContent || document.body.innerText;
+
+            if (textoPagina.toLowerCase().includes(termino.toLowerCase())) {
+                alert(`¡Sí existe! La cadena "${termino}" se encuentra en el documento.`);
+            } else {
+                alert(`No se encontró la cadena "${termino}" dentro del documento.`);
+            }
+        }
+    </script>
+
+</body>
+</html>

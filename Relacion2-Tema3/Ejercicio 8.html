@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <h1>Ordenador de Nombres</h1>
+    
+    <div id="listaNombres"></div>
+    <script>
+        const entrada = prompt("Introduce varios nombres separados por comas (ej: Ana, Carlos, Beatriz):");
+
+        if (entrada !== null && entrada.trim() !== "") {
+
+            let arrayNombres = entrada.split(",");
+
+            for (let i = 0; i < arrayNombres.length; i++) {
+                arrayNombres[i] = arrayNombres[i].trim();
+            }
+
+            arrayNombres.sort();
+
+            let HTMLResultado = "<h3>Nombres ordenados:</h3><ol>";
+            for (let i = 0; i < arrayNombres.length; i++) {
+                if (arrayNombres[i] !== "") { 
+                    HTMLResultado += `<li>${arrayNombres[i]}</li>`;
+                }
+            }
+            HTMLResultado += "</ol>";
+
+            document.getElementById("listaNombres").innerHTML = HTMLResultado;
+        } else {
+            document.getElementById("listaNombres").innerHTML = "<p>No se introdujo ningún nombre.</p>";
+        }
+    </script>
+</body>
+</html>

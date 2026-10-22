@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+    <script>
+        const numeros = [];
+        let num = 0;
+        let suma = 0;
+
+        for (let index = 0; index < 5; index++) {
+           num = parseInt(prompt("Introduzca un número"));
+           suma += num;
+
+           numeros.push(num);
+        }
+
+        document.write(`El mínimo de los 5 números es ${Math.min(... numeros)}<br>`);
+        document.write(`El máximo de los 5 números es ${Math.max(... numeros)}<br>`);
+        document.write(`El medio de los 5 números es ${suma / numeros.length}`);
+    </script>
+</body>
+</html>

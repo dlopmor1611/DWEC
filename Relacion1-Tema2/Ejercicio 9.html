@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <script>
+        let contador = 0;
+        let cadena = prompt("Introduzca una frase");
+        const vocales = ['a', 'e', 'i', 'o', 'u'];
+        for (let index = 0; index < cadena.length; index++) {
+            let letra = cadena[index].toLowerCase();
+            if (vocales.includes(letra)) {
+                contador++;
+            }
+        }
+        document.write(`Una vocal aparece en la cadena ${contador} veces`);
+    </script>
+</body>
+</html>

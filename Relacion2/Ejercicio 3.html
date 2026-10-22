@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 3</title>
+</head>
+<body>
+    <script>
+        let columnas;
+        let altura;
+        let anchura;
+
+        columnas=parseInt(prompt("Dime el número de columnas de una tabla: "));
+        altura=parseInt(prompt("Dime el número de pixeles que quieres para la altura de las celdas: "));
+        anchura=parseInt(prompt("Dime el número de pixeles que quieres para la anchura de las celdas: "));
+
+        document.write(`<table border="0" cellspacing="2" bgcolor="black" width="${anchura*columnas}">`);
+        document.write(`<tr height="${altura}">`);
+        for (let index = 0; index < columnas; index++) {
+            document.write(`<td ${index % 2 === 0 ? "bgcolor=black" : "bgcolor=white"} width="${anchura}"> &nbsp;</td>`);
+        }
+        document.write(`</tr>`);
+        document.write(`</table>`);
+
+
+
+
+    </script>
+</body>
+</html>

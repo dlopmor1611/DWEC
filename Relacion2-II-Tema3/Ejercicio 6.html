@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 6</title>
+</head>
+<body>
+
+    <h2>Registro y Sueldo de Vendedores</h2>
+    
+    <div>
+        <label for="nombre">Nombre del Vendedor:</label>
+        <input type="text" id="nombre" placeholder="Ej. Juan Pérez">
+    </div>
+    
+    <div>
+        <label for="ventas">Ventas Brutas de la Semana (\$):</label>
+        <input type="number" id="ventas" min="0" placeholder="Ej. 5000">
+    </div>
+    
+    <button onclick="registrarVendedor()">Dar de Alta y Calcular</button>
+
+    <h3>Lista de Vendedores y Sueldos</h3>
+    <table>
+        <thead>
+            <tr>
+                <th>Nombre</th>
+                <th>Ventas Brutas</th>
+                <th>Sueldo Final ($200 + 9%)</th>
+            </tr>
+        </thead>
+        <tbody id="tablaVendedores">
+
+        </tbody>
+    </table>
+
+    <script src="funciones.js"></script>
+</body>
+</html>

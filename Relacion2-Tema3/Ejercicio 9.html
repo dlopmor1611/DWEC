@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <script>
+        let texto = prompt("Introduce una cadena de texto:");
+
+        if (texto) {
+            let palabras = texto.split(" ");
+
+            let numPalabras = palabras.length;
+            let primeraPalabra = palabras[0];
+            let ultimaPalabra = palabras[palabras.length - 1];
+
+            const inversas = [... palabras].reverse();
+            const ordenAZ = [... palabras].sort();
+            const ordenZA = [... palabras].reverse();
+
+            const ventana = window.open("", "Resultados", "width=400,height=500");
+            
+            ventana.document.write("<h2>Información del texto</h2>");
+            ventana.document.write(`<p><strong>Número de palabras:</strong> ${numPalabras}</p>`);
+            ventana.document.write(`<p><strong>Primera palabra:</strong> ${primeraPalabra}</p>`);
+            ventana.document.write(`<p><strong>Última palabra:</strong> ${ultimaPalabra}</p>`);
+            ventana.document.write(`<p><strong>Orden inverso:</strong> ${inversas.join(" ")}</p>`);
+            ventana.document.write(`<p><strong>Orden A-Z:</strong> ${ordenAZ.join(" ")}</p>`);
+            ventana.document.write(`<p><strong>Orden Z-A:</strong> ${ordenZA.join(" ")}</p>`);
+            
+            ventana.document.close(); 
+        }
+    </script>
+</body>
+</html>
