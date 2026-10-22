@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <button onclick="abrirVentana()">Abrir ventana secundaria</button>
+    <button onclick="cerrarVentana()">Cerrar ventana secundaria</button>
+    <script>
+        
+        let x = screen.width;
+        let miVentana; 
+
+        function abrirVentana() {
+            let titulo = prompt("Introduzca un título para una página");
+            miVentana = window.open("", "", `width=500,height=400,left=${x}`);
+            miVentana.document.title = titulo;
+        }
+        function cerrarVentana() {
+            miVentana.close();
+        }
+    </script>
+</body>
+</html>

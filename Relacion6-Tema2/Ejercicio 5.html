@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 5</title>
+</head>
+<body>
+
+    <h2>Ejercicio 5 - Propiedades de Document</h2>
+
+    <ul>
+        <li><a onclick="mostrarUltimaModificacion()">a Fecha de última actualización</a></li>
+        <li><a onclick="mostrarReferrer()">b URL de origen (Referrer)</a></li>
+        <li><a onclick="mostrarTitulo()">c Título del documento</a></li>
+        <li><a onclick="mostrarURLCompleta()">d Dirección URL completa</a></li>
+        <li><a onclick="ejemploSobreescribir()">e.2 Ejemplo 2: Escribir TRAS la carga (sobreescribe la página)</a></li>
+    </ul>
+
+    <div class="caja-ejemplo">
+        <h3>Demostración Apartado e</h3>
+        <p><b>Ejemplo 1 (Durante la carga):</b></p>
+        <!-- e.1) Este código se ejecuta mientras el navegador está procesando el HTML -->
+        <script>
+            document.write("<p style='color: green;'>---> Texto añadido mediante document.write() DURANTE la carga (se añade sin borrar nada).</p>");
+        </script>
+    </div>
+
+    <script>
+        document.getElementById("contenedorEjemplo").innerHTML += "<p style='color: green;'>---> Texto añadido con innerHTML (se añade al contenido existente sin borrar nada).</p>";
+    </script>
+
+    <script src="./Scripts/scriptsEJ5.js"></script>
+</body>
+</html>

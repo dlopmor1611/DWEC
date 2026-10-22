@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 8</title>
+</head>
+<body>
+    <script>
+        let valor = parseInt(prompt("Dame un número para comprobar si está en un rango"));
+        let rangoInf = parseInt(prompt("Dame el numero menor del rango"));
+        let rangoSup = parseInt(prompt("Dame el numero mayor del rango"));
+
+        function rango(num, inf, sup) {
+            if (num >= inf && num <= sup) {
+                document.write(`${num} está en el rango`);
+            } else {
+                document.write(`${num} NO está en el rango`);
+            }       
+        }
+
+        rango(valor, rangoInf, rangoSup);
+    </script>
+</body>
+</html>

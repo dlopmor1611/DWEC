@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 12</title>
+</head>
+<body>
+    <button onclick="abrirVentana()">Abrir ventana secundaria</button>
+    <button onclick="cerrarVentana()">Cerrar ventana secundaria</button>
+    
+    <script>
+
+        let miVentana; 
+
+        function abrirVentana() {
+            miVentana = window.open("", "", "width=400, height=250, left=200");
+            miVentana.document.write(`<button onclick="window.opener.cerrarVentana()">Cerrar ventana</button>`)
+        }
+        function cerrarVentana() {
+            miVentana.close();
+        }
+    </script>
+</body>
+</html>

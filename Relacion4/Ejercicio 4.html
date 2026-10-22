@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ej4</title>
+</head>
+<body>
+    <script>
+        const array1 = ["Suspense", "Accion", "Ciencia Ficción"];
+        const array2 = ["Muestra", "Célula"];
+
+        function combineTwoArrays(array1, array2) {
+            const array = [];      
+            for (let index = 0; index < array1.length; index++) {
+                array.push(array1[index]);   
+            }
+            for (let index = 0; index < array2.length; index++) {
+                array.push(array2[index]);   
+            }
+            return array;
+        }
+
+        const arrayJunto = combineTwoArrays(array1, array2);
+        for (let index = 0; index < arrayJunto.length; index++) {
+            document.write(`Elemento[${index}] ${arrayJunto[index]}<br>`);
+        }
+    </script>
+</body>
+</html>

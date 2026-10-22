@@ -1,0 +1,38 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Ejercicio 4</title>
+  </head>
+  <body>
+    <h2>Ejercicios con el Objeto Location</h2>
+
+    <ul>
+      <li><a href="#marcador">aIr hasta el marcador de la página</a></li>
+      <li><a onclick="mostrarHost()">b Mostrar el nombre del host</a></li>
+      <li><a onclick="mostrarURL()">c Mostrar la URL completa</a></li>
+      <li><a onclick="irADireccion()">d Ir a una nueva dirección</a></li>
+      <li>
+        <a onclick="mostrarProtocolo()">e Mostrar el protocolo utilizado</a>
+      </li>
+      <li><a onclick="recargarPagina()">f Recargar la página</a></li>
+    </ul>
+
+    <!-- Espacio para provocar el salto de desplazamiento del apartado a -->
+    <div>
+      <p>Has bajado en la página...</p>
+      <!-- Marcador para el apartado a -->
+      <a
+        id="marcador"
+        name="miMarcadorEspecial"
+        onclick="mostrarNombreMarcador(this)"
+      >
+        [Marcador: Haz clic aquí para ver mi nombre]
+      </a>
+    </div>
+    <script src="./Scripts/scriptsEJ4.js">
+        
+    </script>
+  </body>
+</html>
