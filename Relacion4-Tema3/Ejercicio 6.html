@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejerc    icio 6</title>
+</head>
+<body>
+    <script>
+        function squareCode(text) {
+        let cleanText = text.split('').filter(char => char !== ' ').join('');
+        let L = cleanText.length;
+
+        let cols = Math.ceil(Math.sqrt(L));
+        let rows = Math.floor(Math.sqrt(L));
+        if (rows * cols < L) {
+            rows = cols;
+        }
+        console.log("--- Cuadrícula dividida en líneas ---");
+        let matrix = [];
+        for (let i = 0; i < rows; i++) {
+            let rowText = cleanText.slice(i * cols, (i + 1) * cols);
+            matrix.push(rowText);
+            console.log(rowText); 
+        }
+
+        let encodedColumns = [];
+        for (let col = 0; col < cols; col++) {
+            let encodedCol = '';
+            for (let row = 0; row < rows; row++) {
+            if (matrix[row][col]) {
+                encodedCol += matrix[row][col];
+            }
+            }
+            encodedColumns.push(encodedCol);
+        }
+
+        console.log("\n--- Mensaje codificado ---");
+        return encodedColumns.join(' '); 
+        }
+
+        const message = "If man was meant to stay on the ground god would have given us roots";
+        console.log(squareCode(message));
+    </script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericcio 5</title>
+</head>
+<body>
+    <script>
+        function findSaddlePoints(grid) {
+        let saddlePoints = [];
+        const rows = grid.length;
+        const cols = grid[0].length;
+
+        for (let i = 0; i < rows; i++) {
+            for (let j = 0; j < cols; j++) {
+            let val = grid[i][j];
+
+            let isMaxInRow = grid[i].every(cell => val >= cell);
+
+            let isMinInCol = true;
+            for (let r = 0; r < rows; r++) {
+                if (val > grid[r][j]) {
+                isMinInCol = false;
+                break;
+                }
+            }
+
+            if (isMaxInRow && isMinInCol) {
+                saddlePoints.push({ row: i + 1, col: j + 1, value: val });
+            }
+            }
+        }
+
+        if (saddlePoints.length === 0) {
+            console.log("No saddle points");
+        } else {
+            console.log("Puntos de silla encontrados:", saddlePoints);
+        }
+        
+        return saddlePoints;
+        }
+
+        const matrix5x5 = [
+        [ 9,  8,  7,  6,  5 ],
+        [ 12, 15, 14, 13, 11 ],
+        [ 10, 11, 12,  9,  8 ],
+        [  6,  7,  5,  4,  3 ],
+        [ 15, 16, 17, 18, 19 ]
+        ];
+
+        findSaddlePoints(matrix5x5);
+    </script>
+</body>
+</html>

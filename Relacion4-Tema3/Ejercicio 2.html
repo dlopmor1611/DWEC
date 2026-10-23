@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 2</title>
+</head>
+<body>
+    <script>
+        const nombres = ['John Doe', 'Alice Smith', 'Jane Austen', 'Bob Jones', 'Jack Sparrow', 'James Bond'];
+
+        const nombresOrdenados = nombres
+        .filter(name => name.trim().startsWith('J'))
+        .map(name => name.split(' ').map(part => part[0].toUpperCase()).join(''))
+        .sort();
+
+        console.log(nombresOrdenados); 
+    </script>
+</body>
+</html>

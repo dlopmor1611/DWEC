@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejericcio 3</title>
+    <script src="tesoro.js"></script>
+</head>
+<body>
+    <script>
+        
+        const treasureMap = generateTreasureHunt();
+
+        const result = solveTreasureHunt(treasureMap);
+        console.log("Visited Cells:");
+        result.visited.forEach(step => console.log(step));
+        console.log(`\nTreasure found at: ${result.treasureLocation}`);
+    </script>
+</body>
+</html>
